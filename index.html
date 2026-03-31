@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精緻五子棋 - Gomoku</title>
+    <meta name="description" content="一個優雅、響應式的五子棋遊戲，純 HTML/CSS/JS 打造。">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>五子棋 <span>Gomoku</span></h1>
+            <p class="subtitle">先將五枚棋子連成一線（橫、豎、斜）者獲勝。</p>
+        </header>
+
+        <main>
+            <div id="game-status-board" class="status-board">
+                <div class="player-indicator black-turn active" id="player-black">
+                    <span class="piece-sample"></span>
+                    黑方落子
+                </div>
+                <div class="player-indicator white-turn" id="player-white">
+                    <span class="piece-sample"></span>
+                    白方落子
+                </div>
+            </div>
+
+            <div id="board-container" class="board-container">
+                <!-- 棋盤格子將由 JS 動態生成 -->
+                <div id="board" class="board"></div>
+            </div>
+
+            <div id="win-message" class="win-message hidden">
+                <h2 id="winner-text">黑方獲勝！</h2>
+            </div>
+        </main>
+
+        <footer>
+            <button id="reset-btn" class="btn-primary">重新開始遊戲</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
